@@ -14,17 +14,17 @@ async function main() {
     return app.innerHTML = `<h1>No posts found :(</h1>`
   }
 
-  let current_post_index = read_post_at(posts, 0)
+  let current_post_index = await read_post_at(posts, 0)
 
   const next_button = document.querySelector('button.next')
-  next_button.addEventListener('click', e => {
+  next_button.addEventListener('click', async e => {
     const { target } = e
 
     if (current_post_index === posts.length - 1) {
       return
     }
 
-    current_post_index = read_post_at(posts, current_post_index + 1)
+    current_post_index = await read_post_at(posts, current_post_index + 1)
 
     if (current_post_index === posts.length - 1) {
       target.classList.add('limit')
@@ -32,14 +32,14 @@ async function main() {
   })
 
   const previous_button = document.querySelector('button.previous')
-  previous_button.addEventListener('click', e => {
+  previous_button.addEventListener('click', async e => {
     const { target } = e
 
     if (!current_post_index) {
       return
     }
 
-    current_post_index = read_post_at(posts, current_post_index - 1)
+    current_post_index = await read_post_at(posts, current_post_index - 1)
 
     if (!current_post_index) {
       target.classList.add('limit')
