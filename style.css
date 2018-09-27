@@ -1,0 +1,8 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  background: whitesmoke;
+  color: rgb(60, 60, 60);
+}
