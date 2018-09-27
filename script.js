@@ -14,7 +14,7 @@ async function main() {
     return app.innerHTML = `<h1>No posts found :(</h1>`
   }
 
-  let current_post_index = 0
+  let current_post_index = read_post_at(posts, 0)
 
   const next_button = document.querySelector('button.next')
   next_button.addEventListener('click', e => {
