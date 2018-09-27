@@ -3,12 +3,50 @@ html, body {
   flex-direction: column;
 
   min-height: 100vh;
-  background: whitesmoke;
+  background: rgb(250, 250, 250);
   color: rgb(60, 60, 60);
+  align-items: center;
+  overflow-x: hidden;
+}
+
+nav button + button {
+  margin-left: 1em;
 }
 
 .app {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  align-items: center;
+  line-height: 1.2;
+  text-align: justify;
+  /* max-width: 580px; */
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
 }
 
+.app p, ul {
+  max-width: 580px;
+}
+
+.app h1, .app h2, .app h3 {
+  margin-bottom: .2em;
+  margin-top: .4em;
+  font-family: 'Slabo 27px', serif;
+}
+
+blockquote {
+  background: rgb(200, 200, 200, 0.1);
+  border: solid 1px wheat;
+  padding: 0 1em;
+}
+
+pre {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #282a36;
+  padding: 1em 0;
+  color: #efefe9;
+}
